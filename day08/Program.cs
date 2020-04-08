@@ -81,30 +81,30 @@ namespace day08
             CountAllNodes(head.next);
         }
 
-        public ListNode GetMiddleNode(int n, int c, ListNode node)
+        public ListNode GetMiddleNode(int index, int countMiddle, ListNode node)
         {
-            if (n == c)
+            if (index == countMiddle)
             {
                 return node;
             }
 
-            return GetMiddleNode(n + 1, c, node.next);
+            return GetMiddleNode(index + 1, countMiddle, node.next);
         }
 
         public ListNode MiddleNode(ListNode head)
         {
             CountAllNodes(head);
-            int c = countNodes / 2;
+            int countMiddle = countNodes / 2;
 
             if (countNodes % 2 != 0)
             {
-                c++;
-                return GetMiddleNode(0, c - 1, head);
+                countMiddle++;
+                return GetMiddleNode(0, countMiddle - 1, head);
             }
 
             else
             {
-                return GetMiddleNode(0, c, head);
+                return GetMiddleNode(0, countMiddle, head);
             }
         }
     }
