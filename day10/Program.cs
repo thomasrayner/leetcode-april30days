@@ -8,6 +8,7 @@ namespace day10
     {
         static void Main(string[] args)
         {
+           // Info from the leetcode page
             MinStack minStack = new MinStack();
             minStack.Push(-2);
             minStack.Push(0);
@@ -21,8 +22,9 @@ namespace day10
 
     public class MinStack
     {
-        public Stack fullStack { get; set; }
         /** initialize your data structure here. */
+        public Stack fullStack { get; set; }
+
         public MinStack()
         {
             fullStack = new Stack();
@@ -50,17 +52,7 @@ namespace day10
 
         public int GetMin()
         {
-            int min = int.MaxValue;
-
-            foreach (int i in fullStack)
-            {
-                if (i < min)
-                {
-                    min = i;
-                }
-            }
-
-            return min;
+            return Convert.ToInt32(fullStack.ToArray().Min());
         }
     }
 
