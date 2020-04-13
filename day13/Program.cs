@@ -27,7 +27,7 @@ namespace day13
             int relativeCount = 0;
 
             // Initialize at the "spot before the array", ones relative to zeros is zero
-            indexCountMap.Add(0, -1);
+            indexCountMap.Add(relativeCount, -1);
 
             for (int i = 0; i < nums.Length; i++)
             {
