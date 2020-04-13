@@ -39,9 +39,14 @@ namespace day13
                 if (indexCountMap.ContainsKey(relativeCount))
                 {
                     // If we've already seen this relative count, this is a candidate for the max length
-                    // The new max length is either an already determined max length, or the difference
-                    // Between this current spot in the index, or the first occrence of this relative
-                    // Count
+                    // Because the 1:0 ratio is balanced with some other point in the array
+                    // The new max length is either an already determined max length (because another
+                    // Relative value occurs at further away points in the array), or the difference
+                    // Between this current spot in the index, or the first occrence of this one
+                    // We don't need to add this current instance of this relative count to the dictionary
+                    // Because we only care about the distance between the first occurence of the relative
+                    // Count and this most recent one - any instances of this count between the first and
+                    // Last are inherently not as far away as the first and last instance
                     maxLength = Math.Max(maxLength, (i - indexCountMap[relativeCount]));
                 }
 
