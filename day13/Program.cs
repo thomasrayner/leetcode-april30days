@@ -26,7 +26,7 @@ namespace day13
             int maxLength = 0;
             int relativeCount = 0;
 
-            // Initialize at the "spot before the array", relative to all others is zero
+            // Initialize at the "spot before the array", ones relative to zeros is zero
             indexCountMap.Add(0, -1);
 
             for (int i = 0; i < nums.Length; i++)
