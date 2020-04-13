@@ -23,7 +23,7 @@ namespace day13
         public int FindMaxLength(int[] nums)
         {
             Dictionary<int, int> indexCountMap = new Dictionary<int, int>();
-            int maxLength = 0;
+            int longestDistance = 0;
             int relativeCount = 0;
 
             // Initialize at the "spot before the array", ones relative to zeros is zero
@@ -47,7 +47,7 @@ namespace day13
                     // Because we only care about the distance between the first occurence of the relative
                     // Count and this most recent one - any instances of this count between the first and
                     // Last are inherently not as far away as the first and last instance
-                    maxLength = Math.Max(maxLength, (i - indexCountMap[relativeCount]));
+                    longestDistance = Math.Max(longestDistance, (i - indexCountMap[relativeCount]));
                 }
 
                 else 
@@ -58,7 +58,7 @@ namespace day13
                 }
             }
 
-            return maxLength;
+            return longestDistance;
         }
     }
 }
