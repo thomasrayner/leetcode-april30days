@@ -39,9 +39,10 @@ namespace day14
             }
 
             string direction = finalShift > 0 ? "right" : "left";
+            finalShift = Math.Abs(finalShift);
             Console.WriteLine("Direction: " + direction);
 
-            for (int i = 0; i < Math.Abs(finalShift); i++)
+            for (int i = 0; i < finalShift; i++)
             {
                 s = Shift(direction, s);
             }
