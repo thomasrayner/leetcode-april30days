@@ -23,22 +23,23 @@ namespace day15
         {
             int[] products = new int[nums.Length];
 
-            int prevNextProd = 1;
+            int prevProd = 1;
+            int nextProd = 1;
 
             // set nums[i] = the product of nums[0]..nums[i-1] ie: everything to the left
             for (int i = 0; i < nums.Length; i++)
             {
-                products[i] = prevNextProd;
-                prevNextProd *= nums[i];
+                products[i] = prevProd;
+                prevProd *= nums[i];
             }
 
-            prevNextProd = 1;
+            prevProd = 1;
 
             // multiply nums[i] by the product of nums[i + 1]..nums[nums.Length - 1] ie: everything to the right
             for (int i = nums.Length - 1; i >= 0; i--)
             {
-                products[i] *= prevNextProd;
-                prevNextProd *= nums[i];
+                products[i] *= nextProd;
+                nextProd *= nums[i];
             }
 
             return products;
