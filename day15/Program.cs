@@ -33,8 +33,6 @@ namespace day15
                 prevProd *= nums[i];
             }
 
-            prevProd = 1;
-
             // multiply nums[i] by the product of nums[i + 1]..nums[nums.Length - 1] ie: everything to the right
             for (int i = nums.Length - 1; i >= 0; i--)
             {
