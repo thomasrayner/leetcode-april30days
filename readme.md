@@ -37,3 +37,6 @@ The description:
 * Day 19 - [Search in Rotated Sorted Array](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3304/)
 * Day 20 - [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3305/)
 * Day 21 - [Leftmost Column with at Least a One](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3306/)
+
+## Week 4
+* Day 22 - [Subarray Sum Equals K](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3307/)
