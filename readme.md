@@ -41,3 +41,4 @@ The description:
 ## Week 4
 * Day 22 - [Subarray Sum Equals K](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3307/)
 * Day 23 - [Bitwise AND of Numbers Range](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3308/)
+* Day 24 - [LRU Cache](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3309/)
