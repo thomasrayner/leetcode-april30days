@@ -37,47 +37,48 @@ namespace day28
 
     public class FirstUnique
     {
-        public HashSet<int> NumList { get; set; }
-        public List<int> UniqueNums { get; set; }
+        public LinkedList<int> NumQueue { get; set; }
+        public Dictionary<int, int> NumDict { get; set; }
 
         public FirstUnique(int[] nums)
         {
-            NumList = new HashSet<int>();
-            UniqueNums = new List<int>();
-
-            if (nums.Length < 1)
-            {
-                return;
-            }
+            NumQueue = new LinkedList<int>();
+            NumDict = new Dictionary<int, int>();
 
             for (int i = 0; i < nums.Length; i++)
             {
-                if (NumList.Add(nums[i]))
-                {
-                    UniqueNums.Add(nums[i]);
-                }
-                else
-                {
-                    UniqueNums.Remove(nums[i]);
-                }
+                Add(nums[i]);
+            }
+        }
+
+        public void Add(int num)
+        {
+            if (NumDict.ContainsKey(num))
+            {
+                NumDict[num]++;
+            }
+            else
+            {
+                NumDict.Add(num, 1);
+                NumQueue.AddLast(num);
             }
         }
 
         public int ShowFirstUnique()
         {
-            return UniqueNums.Count > 0 ? UniqueNums[0] : -1;
-        }
+            while (NumQueue.Count > 0)
+            {
+                int c = NumQueue.First.Value;
 
-        public void Add(int value)
-        {
-            if (NumList.Add(value))
-            {
-                UniqueNums.Add(value);
+                if (NumDict[c] == 1)
+                {
+                    return c;
+                }
+
+                NumQueue.RemoveFirst();
             }
-            else
-            {
-                UniqueNums.Remove(value);
-            }
+
+            return -1;
         }
     }
 
