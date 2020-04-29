@@ -46,3 +46,4 @@ The description:
 * Day 26 - [Longest Common Subsequence](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3311/)
 * Day 27 - [Maximal Square](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3312/)
 * Day 28 - [First Unique Number](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/)
+* Day 29 - [Binary Tree Maximum Sum Path](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/532/week-5/3314/)
